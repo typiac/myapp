@@ -44,3 +44,30 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'figaro'
+gem 'haml-rails'
+gem 'protected_attributes'
+gem 'simple_form', '~> 3.0.0.rc'
+
+group :development do
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'rb-fchange', :require=>false
+  gem 'rb-fsevent', :require=>false
+  gem 'rb-inotify', :require=>false
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'email_spec'
+end
+
